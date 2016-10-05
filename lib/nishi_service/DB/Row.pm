@@ -1,7 +1,6 @@
 package nishi_service::DB::Row;
-use strict;
-use warnings;
-use utf8;
-use parent qw(Teng::Row);
+use 5.014002;
+use Mouse;
+extends qw/Aniki::Row/;
 
 1;
