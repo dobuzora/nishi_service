@@ -12,3 +12,6 @@ Oauth認証でログインできる、Webアプリケーションを作成する
 ・ログイン機能(LINE notfify , Oauth)  
 ・データベース(User info , RSS info)  
 ・更新判定　　
+
+## API Document
+[これを見よ！](https://github.com/Nishisi/nishi_service/blob/master/APIDOC.md)
