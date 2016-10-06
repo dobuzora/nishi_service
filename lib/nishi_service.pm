@@ -11,8 +11,6 @@ use parent qw/Amon2/;
 # Enable project local mode.
 __PACKAGE__->make_local_context();
 
-my $schema = nishi_service::DB::Schema->instance;
-
 sub db {
     my $c = shift;
     if (!exists $c->{db}) {
