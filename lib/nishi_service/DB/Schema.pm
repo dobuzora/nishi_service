@@ -1,16 +1,9 @@
 package nishi_service::DB::Schema;
-use strict;
-use warnings;
-use utf8;
+use 5.014002;
 
-use Teng::Schema::Declare;
+use DBIx::Schema::DSL;
+use Aniki::Schema::Relationship::Declare;
 
-base_row_class 'nishi_service::DB::Row';
-
-table {
-    name 'member';
-    pk 'id';
-    columns qw(id name);
-};
+database 'PostgreSQL';
 
 1;
