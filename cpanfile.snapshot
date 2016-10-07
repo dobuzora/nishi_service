@@ -79,6 +79,35 @@ DISTRIBUTIONS
       URI::QueryParam 0
       parent 0.223
       perl 5.008001
+  Anego-0.01_01
+    pathname: P/PA/PAPIX/Anego-0.01_01.tar.gz
+    provides:
+      Anego 0.01_01
+      Anego::CLI undef
+      Anego::CLI::Migrate undef
+      Anego::CLI::Status undef
+      Anego::CLI::Version undef
+      Anego::Config undef
+      Anego::Git undef
+      Anego::Logger undef
+      Anego::Task::Diff undef
+      Anego::Task::GitLog undef
+      Anego::Task::SchemaLoader undef
+      Anego::Util undef
+    requirements:
+      DBI 0
+      DBIx::Schema::DSL 0
+      Digest::MD5 0
+      Exporter 0
+      File::Spec 0
+      Getopt::Long 0
+      Git::Repository 0
+      Module::Build::Tiny 0.035
+      Module::Load 0
+      SQL::Translator 0
+      Term::ANSIColor 0
+      Try::Tiny 0
+      perl 5.008001
   Aniki-1.00
     pathname: K/KA/KARUPA/Aniki-1.00.tar.gz
     provides:
@@ -1203,6 +1232,41 @@ DISTRIBUTIONS
       Filesys::Notify::Simple 0.12
     requirements:
       ExtUtils::MakeMaker 6.30
+  Git-Repository-1.320
+    pathname: B/BO/BOOK/Git-Repository-1.320.tar.gz
+    provides:
+      Git::Repository 1.320
+      Git::Repository::Command 1.320
+      Git::Repository::Plugin 1.320
+      Test::Git 1.320
+    requirements:
+      Carp 0
+      Cwd 0
+      Exporter 0
+      ExtUtils::MakeMaker 0
+      File::Spec 0
+      File::Spec::Functions 0
+      File::Temp 0
+      Git::Version::Compare 1.001
+      IO::Handle 0
+      Scalar::Util 0
+      System::Command 1.118
+      Test::Builder 0
+      namespace::clean 0
+      perl 5.006
+      strict 0
+      warnings 0
+  Git-Version-Compare-1.004
+    pathname: B/BO/BOOK/Git-Version-Compare-1.004.tar.gz
+    provides:
+      Git::Version::Compare 1.004
+    requirements:
+      Carp 0
+      Exporter 0
+      ExtUtils::MakeMaker 0
+      perl 5.006
+      strict 0
+      warnings 0
   HTML-FillInForm-Lite-1.15
     pathname: G/GF/GFUJI/HTML-FillInForm-Lite-1.15.tar.gz
     provides:
@@ -1440,6 +1504,19 @@ DISTRIBUTIONS
       Encode 2.10
       Exporter 5.57
       ExtUtils::MakeMaker 6.30
+  IPC-Run-0.94
+    pathname: T/TO/TODDR/IPC-Run-0.94.tar.gz
+    provides:
+      IPC::Run 0.94
+      IPC::Run::Debug 0.90
+      IPC::Run::IO 0.90
+      IPC::Run::Timer 0.90
+      IPC::Run::Win32Helper 0.90
+      IPC::Run::Win32IO 0.90
+      IPC::Run::Win32Pump 0.90
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::More 0.47
   IPC-Signal-1.00
     pathname: R/RO/ROSCH/IPC-Signal-1.00.tar.gz
     provides:
@@ -2332,6 +2409,28 @@ DISTRIBUTIONS
       perl 5.006
       strict 0
       warnings 0
+  System-Command-1.118
+    pathname: B/BO/BOOK/System-Command-1.118.tar.gz
+    provides:
+      System::Command 1.118
+      System::Command::Reaper 1.118
+    requirements:
+      Carp 0
+      Cwd 0
+      Data::Dumper 0
+      ExtUtils::MakeMaker 0
+      Fcntl 0
+      IO::Handle 0
+      IO::Select 0
+      IPC::Run 0
+      List::Util 0
+      POSIX 0
+      Scalar::Util 0
+      Symbol 0
+      constant 0
+      perl 5.006
+      strict 0
+      warnings 0
   Test-Deep-1.123
     pathname: R/RJ/RJBS/Test-Deep-1.123.tar.gz
     provides:
@@ -2436,6 +2535,19 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       Test::Builder 0.12
       Test::Builder::Tester 1.04
+  Test-Number-Delta-1.06
+    pathname: D/DA/DAGOLDEN/Test-Number-Delta-1.06.tar.gz
+    provides:
+      Test::Number::Delta 1.06
+    requirements:
+      Carp 0
+      Exporter 0
+      ExtUtils::MakeMaker 6.17
+      Test::Builder 0
+      perl 5.006
+      strict 0
+      vars 0
+      warnings 0
   Test-Requires-0.10
     pathname: T/TO/TOKUHIROM/Test-Requires-0.10.tar.gz
     provides:
@@ -2564,6 +2676,22 @@ DISTRIBUTIONS
     requirements:
       Test::More 0
       perl 5.005
+  Time-Moment-0.38
+    pathname: C/CH/CHANSEN/Time-Moment-0.38.tar.gz
+    provides:
+      Time::Moment 0.38
+      Time::Moment::Adjusters 0.38
+    requirements:
+      Carp 0
+      ExtUtils::MakeMaker 6.59
+      ExtUtils::ParseXS 3.18
+      Test::Fatal 0.006
+      Test::More 0.88
+      Test::Number::Delta 1.06
+      Test::Requires 0
+      Time::HiRes 0
+      XSLoader 0.02
+      perl 5.008001
   Try-Tiny-0.27
     pathname: E/ET/ETHER/Try-Tiny-0.27.tar.gz
     provides:

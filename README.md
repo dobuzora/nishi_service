@@ -15,3 +15,8 @@ Oauth認証でログインできる、Webアプリケーションを作成する
 
 ## API Document
 [これを見よ！](https://github.com/Nishisi/nishi_service/blob/master/APIDOC.md)
+
+## Setup
+先に PostgreSQL で `nishi_service` データベースを作成. そのあと次のコマンドを実行.  
+
+    carton exec -- anego migrate
