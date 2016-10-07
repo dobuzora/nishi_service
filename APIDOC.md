@@ -10,15 +10,15 @@ html の input hidden で用意しておくのもアリかも
 ### ログイン失敗した時
 よしなに
 
-## POST /addfeed
-パラメータを送信することで、LINE Notify で通知する RSS feed を新しく通知する.  
+## POST /addurl
+パラメータを送信することで、LINE Notify で通知する RSS feed を新しく通知する.   
+LINE Notify の Oauth で得たアクセストークンをセッション経由で受け取る.
+
 ### parameter
-- access-token
-  - LINE Notify の Oauth で得たアクセストークンを value とする
-- rss-feed
-  - rss 用リンクを array で受け取る
+- urls
+  - 更新を確認したいリンクを array で受け取る
      
-# RSS のリアルタイムの取得をどうすればいいか
-pubsubhubbub の [subscribe](https://pubsubhubbub.appspot.com/subscribe) を使用すればよさそう！  
-参考:  
-[tokuhirom さんブログ](http://blog.64p.org/entry/20100307/push)
+# POST /notification
+- urls
+  - 更新されていることが確認された url が送信される.
+  - 更新されていることが確認された url で検索して, 登録している user_id へ LINE Notify を通じて通知する.
