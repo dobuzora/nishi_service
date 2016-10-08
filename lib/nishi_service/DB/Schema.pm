@@ -17,7 +17,7 @@ create_table 'hang_url' => columns {
 	integer  'id', primary_key, unsigned, auto_increment;
 	integer  'user_id', not_null, unsigned;
 	varchar  'url', primary_key;
-	tinyint  'do_notify', default => 0, not_null;
+	tinyint  'do_notify', default => 1, not_null;
 	datetime 'created_at', not_null;
 	datetime 'update_at', not_null;
 };

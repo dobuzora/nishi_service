@@ -9,11 +9,11 @@ __PACKAGE__->setup(
     row    => 'nishi_service::DB::Row',
 );
 
-__PACKAGE__->meta->make_immutable();
-
 sub connect {
 	my $class = shift;
 	$class->new(@_);
 }
+
+__PACKAGE__->meta->make_immutable();
 
 1;
