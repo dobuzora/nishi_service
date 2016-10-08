@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+dropdb nishi_service
+createdb nishi_service
+carton exec -- anego migrate
