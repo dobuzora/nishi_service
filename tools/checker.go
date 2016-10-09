@@ -54,11 +54,11 @@ func main() {
 			os.Exit(1)
 		}
 
-		if response.Status == "OK" {
+		if response.Status != "OK" {
 			Service.logger.Fatal("Notification failed: " + response.Reason)
+			os.Exit(1)
 		}
 	}
-
 }
 
 func (Service *Nishi) Notification(target interface{}) error {
