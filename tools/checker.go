@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"crypto/md5"
 	"database/sql"
+	"encoding/json"
 	"fmt"
 	"io"
 	"net/http"
@@ -25,7 +26,12 @@ type Nishi struct {
 	referer   string
 	cpu       int
 	logger    zap.Logger
-	urls      []string
+	URLs      []string
+}
+
+type Response struct {
+	Status string
+	Reason string
 }
 
 func main() {
@@ -41,6 +47,48 @@ func main() {
 		os.Exit(1) // Failed to fetch row
 	}
 
+	if len(Service.URLs) > 0 {
+		response := new(Response)
+		if err := Service.Notification(response); err != nil {
+			Service.logger.Fatal(err.Error())
+			os.Exit(1)
+		}
+
+		if response.Status == "OK" {
+			Service.logger.Fatal("Notification failed: " + response.Reason)
+		}
+	}
+
+}
+
+func (Service *Nishi) Notification(target interface{}) error {
+	b, err := Service.CreateJSON()
+	if err != nil {
+		return err
+	}
+	req, err := Service.BuildRequest("POST", "http://localhost:5001/notification", bytes.NewBuffer(b))
+	if err != nil {
+		return err
+	}
+	req.Header.Set("Content-Type", "application/json")
+
+	res, err := http.DefaultClient.Do(req)
+	if err != nil {
+		return err
+	}
+	defer res.Body.Close()
+
+	return json.NewDecoder(res.Body).Decode(target)
+}
+
+func (Service *Nishi) CreateJSON() ([]byte, error) {
+	fmt.Println(Service)
+	byteJSON, err := json.Marshal(Service)
+	if err != nil {
+		return nil, err
+	}
+
+	return byteJSON, nil
 }
 
 func (Service *Nishi) Close() {
@@ -116,8 +164,8 @@ func (Service *Nishi) Run() error {
 	return nil
 }
 
-func (Service *Nishi) BuildRequest(method, url string) (*http.Request, error) {
-	req, err := http.NewRequest(method, url, nil)
+func (Service *Nishi) BuildRequest(method, url string, body io.Reader) (*http.Request, error) {
+	req, err := http.NewRequest(method, url, body)
 	if err != nil {
 		return nil, err
 	}
@@ -129,7 +177,7 @@ func (Service *Nishi) BuildRequest(method, url string) (*http.Request, error) {
 
 func (Service *Nishi) Request(url string, htmlhash []byte) error {
 
-	req, err := Service.BuildRequest("Get", url)
+	req, err := Service.BuildRequest("Get", url, nil)
 	if err != nil {
 		return err
 	}
@@ -154,7 +202,7 @@ func (Service *Nishi) Request(url string, htmlhash []byte) error {
 }
 
 func (Service *Nishi) Insert(url, hash string) error {
-	Service.urls = append(Service.urls, url)
+	Service.URLs = append(Service.URLs, url)
 	stmt := fmt.Sprintf("update website SET (html_hash, updated_at) = ('%s', now()) where url = '%s'", hash, url)
 	_, err := Service.db.Exec(stmt)
 
