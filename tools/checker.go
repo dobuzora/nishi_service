@@ -8,7 +8,9 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"runtime"
 	"strings"
+	"sync"
 	"time"
 
 	"github.com/headzoo/surf/agent"
@@ -21,6 +23,7 @@ type Nishi struct {
 	db        *sql.DB
 	useragent string
 	referer   string
+	cpu       int
 	logger    zap.Logger
 	urls      []string
 }
@@ -28,43 +31,20 @@ type Nishi struct {
 func main() {
 	Service, err := Setup(os.Stdout)
 	if err != nil {
-		panic(err) // Failed to connect Database
+		Service.logger.Fatal(err.Error())
+		os.Exit(1) // Failed to connect Database
 	}
 	defer Service.Close()
 
 	if err := Service.Run(); err != nil {
-		panic(err) // Failed to fetch row
+		Service.logger.Fatal(err.Error())
+		os.Exit(1) // Failed to fetch row
 	}
+
 }
 
-func (Service *Nishi) Run() error {
-	rows, err := Service.db.Query("select url, html_hash from website")
-	if err != nil {
-		return err
-	}
-
-	for rows.Next() {
-		var url []byte
-		var htmlhash []byte
-		if err := rows.Scan(&url, &htmlhash); err != nil {
-			return err
-		}
-
-		urlString := string(url)
-
-		boolean, err := validationCheck(urlString)
-		if err != nil {
-			Service.logger.Error(err.Error())
-		}
-
-		if boolean {
-			if err := Service.Request(urlString, htmlhash); err != nil {
-				Service.logger.Error(err.Error())
-			}
-		}
-	}
-
-	return nil
+func (Service *Nishi) Close() {
+	Service.db.Close()
 }
 
 func Setup(Out zap.WriteSyncer) (*Nishi, error) {
@@ -77,19 +57,66 @@ func Setup(Out zap.WriteSyncer) (*Nishi, error) {
 		db:        db,
 		useragent: agent.Chrome(),
 		referer:   "https://google.com/",
+		cpu:       runtime.NumCPU(),
 		logger: zap.New(
 			zap.NewTextEncoder(zap.TextTimeFormat(time.ANSIC)),
-			zap.AddCaller(), // Add Line number option
+			zap.AddCaller(), // Add line number option
 			zap.Output(Out),
 		),
 	}, nil
 }
 
-func (Service *Nishi) Close() {
-	Service.db.Close()
+// lock
+func p(semaphore chan bool) {
+	semaphore <- true
 }
 
-func (Service *Nishi) buildRequest(method, url string) (*http.Request, error) {
+// unlock
+func v(semaphore chan bool) {
+	<-semaphore
+}
+
+func (Service *Nishi) Run() error {
+	rows, err := Service.db.Query("select url, html_hash from website")
+	if err != nil {
+		return err
+	}
+
+	var wg sync.WaitGroup
+	semaphore := make(chan bool, Service.cpu)
+
+	for rows.Next() {
+		var url []byte
+		var htmlhash []byte
+		if err := rows.Scan(&url, &htmlhash); err != nil {
+			return err
+		}
+
+		wg.Add(1)
+		go func(urlString string, hashdata []byte) {
+			defer wg.Done()
+			p(semaphore)
+			boolean, err := validationCheck(urlString)
+			if err != nil {
+				Service.logger.Error(err.Error())
+			}
+
+			if boolean {
+				if err := Service.Request(urlString, hashdata); err != nil {
+					Service.logger.Error(err.Error())
+				}
+			}
+			v(semaphore)
+		}(string(url), htmlhash)
+	}
+	wg.Wait()
+
+	close(semaphore)
+
+	return nil
+}
+
+func (Service *Nishi) BuildRequest(method, url string) (*http.Request, error) {
 	req, err := http.NewRequest(method, url, nil)
 	if err != nil {
 		return nil, err
@@ -102,7 +129,7 @@ func (Service *Nishi) buildRequest(method, url string) (*http.Request, error) {
 
 func (Service *Nishi) Request(url string, htmlhash []byte) error {
 
-	req, err := Service.buildRequest("Get", url)
+	req, err := Service.BuildRequest("Get", url)
 	if err != nil {
 		return err
 	}
