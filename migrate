@@ -3,3 +3,4 @@
 dropdb nishi_service
 createdb nishi_service
 carton exec -- anego migrate
+psql -d nishi_service < tools/setup.sql

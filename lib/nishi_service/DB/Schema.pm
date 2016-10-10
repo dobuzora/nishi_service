@@ -8,7 +8,6 @@ database 'PostgreSQL';
 
 create_table 'users' => columns {
 	integer  'id', primary_key, unsigned, auto_increment;
-	integer  'user_id', not_null, unsigned;
 	varchar  'token', not_null;
 	datetime 'created_at', not_null;
 };
@@ -16,7 +15,7 @@ create_table 'users' => columns {
 create_table 'hang_url' => columns {
 	integer  'id', primary_key, unsigned, auto_increment;
 	integer  'user_id', not_null, unsigned;
-	varchar  'url', primary_key;
+	varchar  'url', not_null;
 	tinyint  'do_notify', default => 1, not_null;
 	datetime 'created_at', not_null;
 	datetime 'updated_at', not_null;
