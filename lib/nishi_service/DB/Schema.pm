@@ -7,9 +7,9 @@ use Aniki::Schema::Relationship::Declare;
 database 'PostgreSQL';
 
 create_table 'users' => columns {
-	integer 'id', primary_key, unsigned, auto_increment;
-	integer 'user_id', not_null, unsigned;
-	varchar 'token', not_null;
+	integer  'id', primary_key, unsigned, auto_increment;
+	integer  'user_id', not_null, unsigned;
+	varchar  'token', not_null;
 	datetime 'created_at', not_null;
 };
 
@@ -19,7 +19,7 @@ create_table 'hang_url' => columns {
 	varchar  'url', primary_key;
 	tinyint  'do_notify', default => 1, not_null;
 	datetime 'created_at', not_null;
-	datetime 'update_at', not_null;
+	datetime 'updated_at', not_null;
 };
 
 create_table 'website' => columns {
@@ -27,6 +27,7 @@ create_table 'website' => columns {
 	varchar  'url', primary_key;
 	varchar  'html_hash';
 	datetime 'created_at', not_null;
+	datetime 'updated_at', not_null;
 };
 
 1;
