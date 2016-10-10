@@ -82,7 +82,6 @@ func (Service *Nishi) Notification(target interface{}) error {
 }
 
 func (Service *Nishi) CreateJSON() ([]byte, error) {
-	fmt.Println(Service)
 	byteJSON, err := json.Marshal(Service)
 	if err != nil {
 		return nil, err
