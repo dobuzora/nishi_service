@@ -79,6 +79,43 @@ DISTRIBUTIONS
       URI::QueryParam 0
       parent 0.223
       perl 5.008001
+  Amon2-Auth-0.06
+    pathname: T/TO/TOKUHIROM/Amon2-Auth-0.06.tar.gz
+    provides:
+      Amon2::Auth 0.06
+      Amon2::Auth::Site::Facebook undef
+      Amon2::Auth::Site::Github 0.06
+      Amon2::Auth::Site::Loctouch 0.06
+      Amon2::Auth::Site::Twitter undef
+      Amon2::Auth::Util undef
+      Amon2::Plugin::Web::Auth 0.06
+    requirements:
+      Amon2 3.03
+      Hash::MultiValue 0.1
+      JSON 2.53
+      LWP 6.00
+      LWP::Protocol::https 6.00
+      LWP::UserAgent 0
+      Module::Build 0.38
+      Mouse 0.97
+      Net::Twitter::Lite 0.12006
+      Plack 0.9984
+      Plack::Util 0
+      URI 0
+      URI::Escape 0
+      URI::WithBase 0
+      parent 0
+      perl 5.008001
+  Amon2-Plugin-Web-CSRFDefender-7.03
+    pathname: T/TO/TOKUHIROM/Amon2-Plugin-Web-CSRFDefender-7.03.tar.gz
+    provides:
+      Amon2::Plugin::Web::CSRFDefender 7.03
+      Amon2::Plugin::Web::CSRFDefender::Random undef
+    requirements:
+      Amon2::Util 0
+      Digest::SHA 0
+      Module::Build::Tiny 0.035
+      perl 5.008001
   Anego-0.01_01
     pathname: P/PA/PAPIX/Anego-0.01_01.tar.gz
     provides:
@@ -298,6 +335,14 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 0
       base 1.01
+  Class-Accessor-Chained-0.01
+    pathname: R/RC/RCLAMP/Class-Accessor-Chained-0.01.tar.gz
+    provides:
+      Class::Accessor::Chained 0.01
+      Class::Accessor::Chained::Fast undef
+    requirements:
+      Class::Accessor 0
+      Test::More 0
   Class-Accessor-Lite-0.08
     pathname: K/KA/KAZUHO/Class-Accessor-Lite-0.08.tar.gz
     provides:
@@ -320,6 +365,25 @@ DISTRIBUTIONS
       File::Spec 0.80
       Test::More 0.47
       perl 5.006
+  Class-Load-0.23
+    pathname: E/ET/ETHER/Class-Load-0.23.tar.gz
+    provides:
+      Class::Load 0.23
+      Class::Load::PP 0.23
+    requirements:
+      Carp 0
+      Data::OptList 0
+      Exporter 0
+      ExtUtils::MakeMaker 0
+      Module::Implementation 0.04
+      Module::Runtime 0.012
+      Package::Stash 0.14
+      Scalar::Util 0
+      Try::Tiny 0
+      base 0
+      perl 5.006
+      strict 0
+      warnings 0
   Class-Method-Modifiers-2.12
     pathname: E/ET/ETHER/Class-Method-Modifiers-2.12.tar.gz
     provides:
@@ -375,6 +439,26 @@ DISTRIBUTIONS
       Crypt::Rijndael 1.13
     requirements:
       ExtUtils::MakeMaker 0
+      perl 5.006
+  Crypt-SSLeay-0.72
+    pathname: N/NA/NANIS/Crypt-SSLeay-0.72.tar.gz
+    provides:
+      Crypt::SSLeay 0.72
+      Crypt::SSLeay::CTX undef
+      Crypt::SSLeay::Conn undef
+      Crypt::SSLeay::Err undef
+      Crypt::SSLeay::MainContext undef
+      Crypt::SSLeay::Version undef
+      Crypt::SSLeay::X509 undef
+      Net::SSL 2.86
+    requirements:
+      ExtUtils::CBuilder 0.280205
+      ExtUtils::MakeMaker 0
+      Getopt::Long 0
+      LWP::Protocol::https 6.02
+      MIME::Base64 0
+      Path::Class 0.26
+      Try::Tiny 0.19
       perl 5.006
   DBD-SQLite-1.50
     pathname: I/IS/ISHIGAKI/DBD-SQLite-1.50.tar.gz
@@ -499,6 +583,31 @@ DISTRIBUTIONS
       DBIx::TransactionManager 1.09
       Module::Build::Tiny 0.035
       perl 5.008_001
+  DBIx-Inspector-0.12
+    pathname: T/TO/TOKUHIROM/DBIx-Inspector-0.12.tar.gz
+    provides:
+      DBIx::Inspector 0.12
+      DBIx::Inspector::Column undef
+      DBIx::Inspector::Column::Pg undef
+      DBIx::Inspector::Driver::Base undef
+      DBIx::Inspector::Driver::Pg undef
+      DBIx::Inspector::Driver::SQLite undef
+      DBIx::Inspector::Driver::mysql undef
+      DBIx::Inspector::ForeignKey undef
+      DBIx::Inspector::ForeignKey::Pg undef
+      DBIx::Inspector::Iterator undef
+      DBIx::Inspector::Iterator::Null undef
+      DBIx::Inspector::Table undef
+      DBIx::Inspector::Table::Pg undef
+    requirements:
+      CPAN::Meta 0
+      CPAN::Meta::Prereqs 0
+      Class::Accessor::Lite 0.05
+      DBI 0
+      ExtUtils::CBuilder 0
+      Module::Build 0.38
+      Module::Load 0
+      perl 5.008001
   DBIx-Schema-DSL-0.12
     pathname: S/SO/SONGMU/DBIx-Schema-DSL-0.12.tar.gz
     provides:
@@ -537,6 +646,25 @@ DISTRIBUTIONS
       Test::Requires 0
       XSLoader 0.02
       perl 5.008001
+  Data-OptList-0.110
+    pathname: R/RJ/RJBS/Data-OptList-0.110.tar.gz
+    provides:
+      Data::OptList 0.110
+    requirements:
+      ExtUtils::MakeMaker 0
+      List::Util 0
+      Params::Util 0
+      Sub::Install 0.921
+      strict 0
+      warnings 0
+  Data-Page-2.02
+    pathname: L/LB/LBROCARD/Data-Page-2.02.tar.gz
+    provides:
+      Data::Page 2.02
+    requirements:
+      Class::Accessor::Chained::Fast 0
+      Test::Exception 0
+      Test::More 0
   Data-Page-NoTotalEntries-0.02
     pathname: T/TO/TOKUHIROM/Data-Page-NoTotalEntries-0.02.tar.gz
     provides:
@@ -1504,6 +1632,22 @@ DISTRIBUTIONS
       Encode 2.10
       Exporter 5.57
       ExtUtils::MakeMaker 6.30
+  IO-Socket-SSL-2.038
+    pathname: S/SU/SULLR/IO-Socket-SSL-2.038.tar.gz
+    provides:
+      IO::Socket::SSL 2.038
+      IO::Socket::SSL::Intercept 2.014
+      IO::Socket::SSL::OCSP_Cache 2.038
+      IO::Socket::SSL::OCSP_Resolver 2.038
+      IO::Socket::SSL::PublicSuffix undef
+      IO::Socket::SSL::SSL_Context 2.038
+      IO::Socket::SSL::SSL_HANDLE 2.038
+      IO::Socket::SSL::Session_Cache 2.038
+      IO::Socket::SSL::Utils 2.014
+    requirements:
+      ExtUtils::MakeMaker 0
+      Net::SSLeay 1.46
+      Scalar::Util 0
   IPC-Run-0.94
     pathname: T/TO/TODDR/IPC-Run-0.94.tar.gz
     provides:
@@ -1563,6 +1707,18 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 0
       perl 5.006002
+  LWP-Protocol-https-6.06
+    pathname: M/MS/MSCHILLI/LWP-Protocol-https-6.06.tar.gz
+    provides:
+      LWP::Protocol::https 6.06
+      LWP::Protocol::https::Socket 6.06
+    requirements:
+      ExtUtils::MakeMaker 0
+      IO::Socket::SSL 1.54
+      LWP::UserAgent 6.06
+      Mozilla::CA 20110101
+      Net::HTTPS 6
+      perl 5.008001
   Lexical-SealRequireHints-0.010
     pathname: Z/ZE/ZEFRAM/Lexical-SealRequireHints-0.010.tar.gz
     provides:
@@ -1818,6 +1974,14 @@ DISTRIBUTIONS
       Scalar::Util 1.14
       XSLoader 0.02
       perl 5.008005
+  Mozilla-CA-20160104
+    pathname: A/AB/ABH/Mozilla-CA-20160104.tar.gz
+    provides:
+      Mozilla::CA 20160104
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test 0
+      perl 5.006
   Net-HTTP-6.09
     pathname: E/ET/ETHER/Net-HTTP-6.09.tar.gz
     provides:
@@ -1833,6 +1997,42 @@ DISTRIBUTIONS
       IO::Uncompress::Gunzip 0
       URI 0
       perl 5.006002
+  Net-SSLeay-1.78
+    pathname: M/MI/MIKEM/Net-SSLeay-1.78.tar.gz
+    provides:
+      Net::SSLeay 1.78
+      Net::SSLeay::Handle 0.61
+    requirements:
+      ExtUtils::MakeMaker 6.36
+      MIME::Base64 0
+      Test::More 0.60_01
+      perl 5.005
+  Net-Twitter-Lite-0.12006
+    pathname: M/MM/MMIMS/Net-Twitter-Lite-0.12006.tar.gz
+    provides:
+      Net::Twitter::Lite 0.12006
+      Net::Twitter::Lite::API::V1 0.12006
+      Net::Twitter::Lite::API::V1_1 0.12006
+      Net::Twitter::Lite::Error 0.12006
+      Net::Twitter::Lite::WithAPIv1_1 0.12006
+      Net::Twitter::Lite::WrapResult 0.12006
+    requirements:
+      Carp 0
+      Crypt::SSLeay 0.5
+      Encode 0
+      HTTP::Request::Common 0
+      JSON 2.02
+      LWP::UserAgent 2.032
+      Module::Build 0.3601
+      Net::HTTP >= 0, != 6.04, != 6.05
+      Net::Netrc 0
+      URI 1.40
+      URI::Escape 0
+      overload 0
+      parent 0
+      perl 5.005
+      strict 0
+      warnings 0
   POSIX-strftime-Compiler-0.42
     pathname: K/KA/KAZEBURO/POSIX-strftime-Compiler-0.42.tar.gz
     provides:
@@ -1900,6 +2100,17 @@ DISTRIBUTIONS
       Test::Requires 0
       Test::SharedFork 0
       perl 5.008001
+  Params-Util-1.07
+    pathname: A/AD/ADAMK/Params-Util-1.07.tar.gz
+    provides:
+      Params::Util 1.07
+    requirements:
+      ExtUtils::CBuilder 0.27
+      ExtUtils::MakeMaker 6.52
+      File::Spec 0.80
+      Scalar::Util 1.18
+      Test::More 0.42
+      perl 5.00503
   Params-ValidationCompiler-0.13
     pathname: D/DR/DROLSKY/Params-ValidationCompiler-0.13.tar.gz
     provides:
@@ -1939,6 +2150,31 @@ DISTRIBUTIONS
     requirements:
       Test::More 0
       Text::Balanced 1.95
+  Path-Class-0.37
+    pathname: K/KW/KWILLIAMS/Path-Class-0.37.tar.gz
+    provides:
+      Path::Class 0.37
+      Path::Class::Dir 0.37
+      Path::Class::Entity 0.37
+      Path::Class::File 0.37
+    requirements:
+      Carp 0
+      Cwd 0
+      Exporter 0
+      ExtUtils::MakeMaker 6.30
+      File::Copy 0
+      File::Path 0
+      File::Spec 3.26
+      File::Temp 0
+      File::stat 0
+      IO::Dir 0
+      IO::File 0
+      Module::Build 0.3601
+      Perl::OSType 0
+      Scalar::Util 0
+      overload 0
+      parent 0
+      strict 0
   Plack-1.0042
     pathname: M/MI/MIYAGAWA/Plack-1.0042.tar.gz
     provides:
@@ -2387,6 +2623,17 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 0
       Test::More 0
+  Sub-Install-0.928
+    pathname: R/RJ/RJBS/Sub-Install-0.928.tar.gz
+    provides:
+      Sub::Install 0.928
+    requirements:
+      B 0
+      Carp 0
+      ExtUtils::MakeMaker 6.30
+      Scalar::Util 0
+      strict 0
+      warnings 0
   Sub-Name-0.21
     pathname: E/ET/ETHER/Sub-Name-0.21.tar.gz
     provides:
@@ -2431,6 +2678,39 @@ DISTRIBUTIONS
       perl 5.006
       strict 0
       warnings 0
+  Teng-0.28
+    pathname: S/SA/SATOH/Teng-0.28.tar.gz
+    provides:
+      Teng 0.28
+      Teng::Iterator undef
+      Teng::Plugin::BulkInsert undef
+      Teng::Plugin::Count undef
+      Teng::Plugin::FindOrCreate undef
+      Teng::Plugin::Lookup undef
+      Teng::Plugin::Pager undef
+      Teng::Plugin::Pager::MySQLFoundRows undef
+      Teng::Plugin::Replace undef
+      Teng::Plugin::SQLPager undef
+      Teng::Plugin::SingleBySQL undef
+      Teng::QueryBuilder undef
+      Teng::Row undef
+      Teng::Schema undef
+      Teng::Schema::Declare undef
+      Teng::Schema::Dumper undef
+      Teng::Schema::Loader undef
+      Teng::Schema::Table undef
+    requirements:
+      Class::Accessor::Lite 0.05
+      Class::Load 0.06
+      DBI 1.33
+      DBIx::Inspector 0.06
+      DBIx::TransactionManager 1.06
+      Data::Page 0
+      Data::Page::NoTotalEntries 0.02
+      Module::Build 0.38
+      SQL::Maker 0.14
+      parent 0
+      perl 5.008_001
   Test-Deep-1.123
     pathname: R/RJ/RJBS/Test-Deep-1.123.tar.gz
     provides:

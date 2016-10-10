@@ -19,6 +19,9 @@ requires 'Mouse';
 requires 'DBIx::Schema::DSL';
 requires 'Clone';
 requires 'Time::Moment';
+requires 'Amon2::Auth';
+requires 'Amon2::Plugin::Web::CSRFDefender';
+
 
 on configure => sub {
     requires 'Module::Build', '0.38';
