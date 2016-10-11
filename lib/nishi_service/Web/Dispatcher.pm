@@ -8,7 +8,6 @@ use Data::Dumper;
 
 any '/' => sub {
     my ($c) = @_;
-    $c->session->set("xsrf" => Amon2::Util::random_string(32));
     my $counter = $c->session->get('counter') || 0;
     $counter++;
     $c->session->set('counter' => $counter);
@@ -16,7 +15,6 @@ any '/' => sub {
 	counter => $counter,
     });
 };
-
 
 post '/reset_counter' => sub {
     my $c = shift;
