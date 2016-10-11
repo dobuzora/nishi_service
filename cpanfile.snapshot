@@ -341,14 +341,6 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 0
       base 1.01
-  Class-Accessor-Chained-0.01
-    pathname: R/RC/RCLAMP/Class-Accessor-Chained-0.01.tar.gz
-    provides:
-      Class::Accessor::Chained 0.01
-      Class::Accessor::Chained::Fast undef
-    requirements:
-      Class::Accessor 0
-      Test::More 0
   Class-Accessor-Lite-0.08
     pathname: K/KA/KAZUHO/Class-Accessor-Lite-0.08.tar.gz
     provides:
@@ -371,25 +363,6 @@ DISTRIBUTIONS
       File::Spec 0.80
       Test::More 0.47
       perl 5.006
-  Class-Load-0.23
-    pathname: E/ET/ETHER/Class-Load-0.23.tar.gz
-    provides:
-      Class::Load 0.23
-      Class::Load::PP 0.23
-    requirements:
-      Carp 0
-      Data::OptList 0
-      Exporter 0
-      ExtUtils::MakeMaker 0
-      Module::Implementation 0.04
-      Module::Runtime 0.012
-      Package::Stash 0.14
-      Scalar::Util 0
-      Try::Tiny 0
-      base 0
-      perl 5.006
-      strict 0
-      warnings 0
   Class-Method-Modifiers-2.12
     pathname: E/ET/ETHER/Class-Method-Modifiers-2.12.tar.gz
     provides:
@@ -589,31 +562,6 @@ DISTRIBUTIONS
       DBIx::TransactionManager 1.09
       Module::Build::Tiny 0.035
       perl 5.008_001
-  DBIx-Inspector-0.12
-    pathname: T/TO/TOKUHIROM/DBIx-Inspector-0.12.tar.gz
-    provides:
-      DBIx::Inspector 0.12
-      DBIx::Inspector::Column undef
-      DBIx::Inspector::Column::Pg undef
-      DBIx::Inspector::Driver::Base undef
-      DBIx::Inspector::Driver::Pg undef
-      DBIx::Inspector::Driver::SQLite undef
-      DBIx::Inspector::Driver::mysql undef
-      DBIx::Inspector::ForeignKey undef
-      DBIx::Inspector::ForeignKey::Pg undef
-      DBIx::Inspector::Iterator undef
-      DBIx::Inspector::Iterator::Null undef
-      DBIx::Inspector::Table undef
-      DBIx::Inspector::Table::Pg undef
-    requirements:
-      CPAN::Meta 0
-      CPAN::Meta::Prereqs 0
-      Class::Accessor::Lite 0.05
-      DBI 0
-      ExtUtils::CBuilder 0
-      Module::Build 0.38
-      Module::Load 0
-      perl 5.008001
   DBIx-Schema-DSL-0.12
     pathname: S/SO/SONGMU/DBIx-Schema-DSL-0.12.tar.gz
     provides:
@@ -652,25 +600,6 @@ DISTRIBUTIONS
       Test::Requires 0
       XSLoader 0.02
       perl 5.008001
-  Data-OptList-0.110
-    pathname: R/RJ/RJBS/Data-OptList-0.110.tar.gz
-    provides:
-      Data::OptList 0.110
-    requirements:
-      ExtUtils::MakeMaker 0
-      List::Util 0
-      Params::Util 0
-      Sub::Install 0.921
-      strict 0
-      warnings 0
-  Data-Page-2.02
-    pathname: L/LB/LBROCARD/Data-Page-2.02.tar.gz
-    provides:
-      Data::Page 2.02
-    requirements:
-      Class::Accessor::Chained::Fast 0
-      Test::Exception 0
-      Test::More 0
   Data-Page-NoTotalEntries-0.02
     pathname: T/TO/TOKUHIROM/Data-Page-NoTotalEntries-0.02.tar.gz
     provides:
@@ -1366,6 +1295,27 @@ DISTRIBUTIONS
       Filesys::Notify::Simple 0.12
     requirements:
       ExtUtils::MakeMaker 6.30
+  Furl-3.09
+    pathname: S/SY/SYOHEX/Furl-3.09.tar.gz
+    provides:
+      Furl 3.09
+      Furl::ConnectionCache undef
+      Furl::HTTP 3.09
+      Furl::Headers undef
+      Furl::Request undef
+      Furl::Response undef
+      Furl::ZlibStream undef
+    requirements:
+      Class::Accessor::Lite 0
+      Encode 0
+      HTTP::Parser::XS 0.11
+      MIME::Base64 0
+      Module::Build::Tiny 0.035
+      Mozilla::CA 0
+      Scalar::Util 0
+      Socket 0
+      Time::HiRes 0
+      perl 5.008001
   Git-Repository-1.320
     pathname: B/BO/BOOK/Git-Repository-1.320.tar.gz
     provides:
@@ -1588,6 +1538,14 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       HTTP::Headers 6
       perl 5.008001
+  HTTP-Parser-XS-0.17
+    pathname: K/KA/KAZUHO/HTTP-Parser-XS-0.17.tar.gz
+    provides:
+      HTTP::Parser::XS 0.17
+      HTTP::Parser::XS::PP undef
+    requirements:
+      ExtUtils::MakeMaker 6.36
+      Test::More 0.96
   HTTP-Server-Simple-0.51
     pathname: B/BP/BPS/HTTP-Server-Simple-0.51.tar.gz
     provides:
@@ -2115,17 +2073,6 @@ DISTRIBUTIONS
       Test::Requires 0
       Test::SharedFork 0
       perl 5.008001
-  Params-Util-1.07
-    pathname: A/AD/ADAMK/Params-Util-1.07.tar.gz
-    provides:
-      Params::Util 1.07
-    requirements:
-      ExtUtils::CBuilder 0.27
-      ExtUtils::MakeMaker 6.52
-      File::Spec 0.80
-      Scalar::Util 1.18
-      Test::More 0.42
-      perl 5.00503
   Params-ValidationCompiler-0.13
     pathname: D/DR/DROLSKY/Params-ValidationCompiler-0.13.tar.gz
     provides:
@@ -2638,17 +2585,6 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 0
       Test::More 0
-  Sub-Install-0.928
-    pathname: R/RJ/RJBS/Sub-Install-0.928.tar.gz
-    provides:
-      Sub::Install 0.928
-    requirements:
-      B 0
-      Carp 0
-      ExtUtils::MakeMaker 6.30
-      Scalar::Util 0
-      strict 0
-      warnings 0
   Sub-Name-0.21
     pathname: E/ET/ETHER/Sub-Name-0.21.tar.gz
     provides:
@@ -2693,39 +2629,6 @@ DISTRIBUTIONS
       perl 5.006
       strict 0
       warnings 0
-  Teng-0.28
-    pathname: S/SA/SATOH/Teng-0.28.tar.gz
-    provides:
-      Teng 0.28
-      Teng::Iterator undef
-      Teng::Plugin::BulkInsert undef
-      Teng::Plugin::Count undef
-      Teng::Plugin::FindOrCreate undef
-      Teng::Plugin::Lookup undef
-      Teng::Plugin::Pager undef
-      Teng::Plugin::Pager::MySQLFoundRows undef
-      Teng::Plugin::Replace undef
-      Teng::Plugin::SQLPager undef
-      Teng::Plugin::SingleBySQL undef
-      Teng::QueryBuilder undef
-      Teng::Row undef
-      Teng::Schema undef
-      Teng::Schema::Declare undef
-      Teng::Schema::Dumper undef
-      Teng::Schema::Loader undef
-      Teng::Schema::Table undef
-    requirements:
-      Class::Accessor::Lite 0.05
-      Class::Load 0.06
-      DBI 1.33
-      DBIx::Inspector 0.06
-      DBIx::TransactionManager 1.06
-      Data::Page 0
-      Data::Page::NoTotalEntries 0.02
-      Module::Build 0.38
-      SQL::Maker 0.14
-      parent 0
-      perl 5.008_001
   Test-Deep-1.123
     pathname: R/RJ/RJBS/Test-Deep-1.123.tar.gz
     provides:

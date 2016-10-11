@@ -21,6 +21,7 @@ requires 'Clone';
 requires 'Time::Moment';
 requires 'Amon2::Auth';
 requires 'JSON::XS';
+requires 'Furl';
 
 on configure => sub {
     requires 'Module::Build', '0.38';

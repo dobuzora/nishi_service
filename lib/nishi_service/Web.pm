@@ -17,7 +17,6 @@ __PACKAGE__->load_plugins(
     'Web::FillInFormLite',
     'Web::JSON',
     '+nishi_service::Web::Plugin::Session',
-    'Web::CSRFDefender',
 );
 
 # setup view
@@ -48,10 +47,11 @@ __PACKAGE__->add_trigger(
 );
 
 __PACKAGE__->load_plugin('Web::Auth',{
-    module => 'Line_Notify',
+    module => 'LINENotify',
     on_finished => sub {
-	my ($c,$access_token) = @_;
-	return $c->redirect('/');
+    	my ($c, $access_token) = @_;
+        warn $access_token;
+    	return $c->redirect('/');
     }
 });
 
