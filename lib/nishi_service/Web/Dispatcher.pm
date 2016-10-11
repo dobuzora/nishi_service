@@ -3,8 +3,6 @@ use strict;
 use warnings;
 use utf8;
 use Amon2::Web::Dispatcher::RouterBoom;
-#use nishi_service::Auth::Line_Notify;
-use Data::Dumper;
 
 any '/' => sub {
     my ($c) = @_;

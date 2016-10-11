@@ -20,7 +20,6 @@ requires 'DBIx::Schema::DSL';
 requires 'Clone';
 requires 'Time::Moment';
 requires 'Amon2::Auth';
-requires 'Amon2::Plugin::Web::CSRFDefender';
 requires 'JSON::XS';
 
 on configure => sub {

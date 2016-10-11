@@ -10,7 +10,6 @@ use URI;
 use JSON::XS;
 use Amon2::Auth::Util qw(parse_content);
 use Amon2::Auth;
-use Data::Dumper;
 
 
 sub moniker { 'line_notify' } 
@@ -42,7 +41,6 @@ has ua => (
     lazy => 1,
     default => sub {
 	my $ua = LWP::UserAgent->new(agent => "Amon2::Auth/$Amon2::Auth::VERSION");
-	#my $ua = LWP::UserAgent->new('Content-Type' => 'application/x-www-form-urlencoded');
     },
 );
 
@@ -74,17 +72,12 @@ sub auth_uri {
     } elsif (defined $self->redirect_url) {
         $params{redirect_uri} = $self->redirect_url;
     }
-    #$params{redirect_uri} = 'http://127.0.0.1:5000/callback';
-    #$params{redirect_uri} = 'http://127.0.0.1:5000/auth/line_notify/callback';
     $params{response_type} = 'code';
     $params{client_id} = $self->client_id;
     $params{scope} = 'notify';
-    #$params{response_mode} = 'form_post';
-    #$params{state} = $c->get_csrf_defender_token();
+    $params{state} = $c->get_csrf_defender_token();
     $params{state} = $c->session->xsrf_token();
-    print STDERR Dumper %params;
     $redirect_uri->query_form(%params);
-    print STDERR "\n"."****************************************";
     return $redirect_uri->as_string;
 }
 
@@ -93,26 +86,19 @@ sub callback {
 
     my $code = $c->req->param('code') or die "Cannot get a 'code' parameter";
     my %params = (code => $code);
-    #warn $code;
-    #warn $self->redirect_url;
     $params{grant_type} = 'authorization_code';
     $params{client_id} = $self->client_id;
     $params{client_secret} = $self->client_secret;
     $params{redirect_uri} = $self->redirect_url if defined $self->redirect_url;
     $params{redirect_uri} =  'http://127.0.0.1:5000/auth/line_notify/callback';
-
     my $res = $self->ua->post($self->access_token_url, \%params);
     $res->header('Content-Type' => 'application/x-www-form-urlencoded');
     $res->is_success or die "Cannot authenticate";
     my $dat = decode_json $res->decoded_content;
-    print STDERR Dumper $dat;
     if (my $err = $dat->{error}) {
 	return $callback->{on_error}->($err);
     }
     my $access_token = $dat->{access_token} or die "Cannot get a access_token";
-    print STDERR "###########################################";
     return $callback->{on_finished}->( $access_token );
 }
-
-
 1;
