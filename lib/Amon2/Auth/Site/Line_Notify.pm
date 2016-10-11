@@ -74,16 +74,13 @@ sub auth_uri {
         $params{redirect_uri} = $self->redirect_url;
     }
     #$params{redirect_uri} = 'http://127.0.0.1:5000/callback';
-    $params{redirect_uri} = 'https://www.google.co.jp';
+    #$params{redirect_uri} = 'http://127.0.0.1:5000/auth/line_notify/callback';
     $params{response_type} = 'code';
     $params{client_id} = $self->client_id;
     $params{scope} = 'notify';
-    $params{response_mode} = 'form_post';
+    #$params{response_mode} = 'form_post';
     #$params{state} = $c->get_csrf_defender_token();
-    $params{state} = $c->session->get('xsrf');
-
-    my $token = $c->req->param('XSRF-TOKEN');
-
+    $params{state} = $c->session->xsrf_token();
     print STDERR Dumper %params;
     $redirect_uri->query_form(%params);
     print STDERR "\n"."****************************************";
@@ -93,17 +90,21 @@ sub auth_uri {
 sub callback {
     my ($self, $c, $callback) = @_;
 
-    print STDERR "callbackだよ";
-
     my $code = $c->req->param('code') or die "Cannot get a 'code' parameter";
     my %params = (code => $code);
     warn $code;
-    warn $self->redirect_url;
+    #warn $self->redirect_url;
     $params{grant_type} = 'authorization_code';
     $params{client_id} = $self->client_id;
     $params{client_secret} = $self->client_secret;
     $params{redirect_uri} = $self->redirect_url if defined $self->redirect_url;
+    $params{redirect_uri} =  'http://127.0.0.1:5000/auth/line_notify/callback';
+    print STDERR Dumper %params;
+    #$req->header('Content-Type' => 'application/x-www-form-urlencoded');
+    print STDERR "\n",%params;
+
     my $res = $self->ua->post($self->access_token_url, \%params);
+    print STDERR "\n",$res;
     $res->is_success or die "Cannot authenticate";
     my $dat = parse_content($res->decoded_content);
     if (my $err = $dat->{error}) {

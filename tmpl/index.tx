@@ -8,8 +8,17 @@
 <a href="<: uri_for('/auth/github/authenticate') :>">Github Login</a>
 <a href="<: uri_for('/auth/line_notify/authenticate') :>">Line Login</a>
 
-<p>K</p>
-
+<form class="form-inline" method="POST" action="<: uri_for('/post') :>">
+    <div class="form-group">
+        <label>タイトル</label>
+        <input type="text" class="form-control" name="title" placeholder="">
+    </div>
+    <div class="form-group">
+        <label>URL</label>
+        <input type="text" class="form-control" name="date" placeholder="">
+    </div>
+    <button type="submit" class="btn btn-default">登録</button>
+</form>
 
 
 : }
