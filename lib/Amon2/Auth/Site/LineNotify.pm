@@ -10,7 +10,6 @@ use URI;
 use JSON::XS;
 use Amon2::Auth;
 
-
 sub moniker { 'line_notify' }
 
 has furl => (
@@ -102,5 +101,6 @@ sub callback {
     return $callback->{on_finished}->($access_token);
 }
 
+__PACKAGE__->meta->make_immutable();
 
 1;
