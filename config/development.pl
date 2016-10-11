@@ -8,8 +8,8 @@
     
     Auth => +{
 	Line_Notify => +{
-	    client_id       => 'mijboN1vs24zxpRNndXrvr',
-	    client_secret   => 'x2e8NC7OM4ehvQeUUPfjKeqmg7OyDsxDp2JV3nEyrQS',
+	    client_id       => '',
+	    client_secret   => '',
 	}
     }
 };
