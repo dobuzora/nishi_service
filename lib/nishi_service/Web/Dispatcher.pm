@@ -10,7 +10,7 @@ any '/' => sub {
     $counter++;
     $c->session->set('counter' => $counter);
     return $c->render('index.tx', {
-        counter => $counter,
+	counter => $counter,
     });
 };
 

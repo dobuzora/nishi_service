@@ -4,7 +4,7 @@ requires 'Crypt::Rijndael';
 requires 'DBD::SQLite', '1.33';
 requires 'HTML::FillInForm::Lite', '1.11';
 requires 'HTTP::Session2', '1.03';
-requires 'JSON', '2.50';
+requires 'JSON';
 requires 'Module::Functions', '2';
 requires 'Plack::Middleware::ReverseProxy', '0.09';
 requires 'Router::Boom', '0.06';
@@ -19,6 +19,8 @@ requires 'Mouse';
 requires 'DBIx::Schema::DSL';
 requires 'Clone';
 requires 'Time::Moment';
+requires 'Amon2::Auth';
+requires 'JSON::XS';
 
 on configure => sub {
     requires 'Module::Build', '0.38';

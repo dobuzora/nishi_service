@@ -5,6 +5,7 @@ use utf8;
 use parent qw/nishi_service Amon2::Web/;
 use File::Spec;
 
+
 # dispatcher
 use nishi_service::Web::Dispatcher;
 sub dispatch {
@@ -16,6 +17,7 @@ __PACKAGE__->load_plugins(
     'Web::FillInFormLite',
     'Web::JSON',
     '+nishi_service::Web::Plugin::Session',
+    'Web::CSRFDefender',
 );
 
 # setup view
@@ -44,5 +46,13 @@ __PACKAGE__->add_trigger(
         $res->header( 'Cache-Control' => 'private' );
     },
 );
+
+__PACKAGE__->load_plugin('Web::Auth',{
+    module => 'Line_Notify',
+    on_finished => sub {
+	my ($c,$access_token) = @_;
+	return $c->redirect('/');
+    }
+});
 
 1;
