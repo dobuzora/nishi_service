@@ -341,14 +341,6 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 0
       base 1.01
-  Class-Accessor-Chained-0.01
-    pathname: R/RC/RCLAMP/Class-Accessor-Chained-0.01.tar.gz
-    provides:
-      Class::Accessor::Chained 0.01
-      Class::Accessor::Chained::Fast undef
-    requirements:
-      Class::Accessor 0
-      Test::More 0
   Class-Accessor-Lite-0.08
     pathname: K/KA/KAZUHO/Class-Accessor-Lite-0.08.tar.gz
     provides:
@@ -589,31 +581,6 @@ DISTRIBUTIONS
       DBIx::TransactionManager 1.09
       Module::Build::Tiny 0.035
       perl 5.008_001
-  DBIx-Inspector-0.12
-    pathname: T/TO/TOKUHIROM/DBIx-Inspector-0.12.tar.gz
-    provides:
-      DBIx::Inspector 0.12
-      DBIx::Inspector::Column undef
-      DBIx::Inspector::Column::Pg undef
-      DBIx::Inspector::Driver::Base undef
-      DBIx::Inspector::Driver::Pg undef
-      DBIx::Inspector::Driver::SQLite undef
-      DBIx::Inspector::Driver::mysql undef
-      DBIx::Inspector::ForeignKey undef
-      DBIx::Inspector::ForeignKey::Pg undef
-      DBIx::Inspector::Iterator undef
-      DBIx::Inspector::Iterator::Null undef
-      DBIx::Inspector::Table undef
-      DBIx::Inspector::Table::Pg undef
-    requirements:
-      CPAN::Meta 0
-      CPAN::Meta::Prereqs 0
-      Class::Accessor::Lite 0.05
-      DBI 0
-      ExtUtils::CBuilder 0
-      Module::Build 0.38
-      Module::Load 0
-      perl 5.008001
   DBIx-Schema-DSL-0.12
     pathname: S/SO/SONGMU/DBIx-Schema-DSL-0.12.tar.gz
     provides:
@@ -663,14 +630,6 @@ DISTRIBUTIONS
       Sub::Install 0.921
       strict 0
       warnings 0
-  Data-Page-2.02
-    pathname: L/LB/LBROCARD/Data-Page-2.02.tar.gz
-    provides:
-      Data::Page 2.02
-    requirements:
-      Class::Accessor::Chained::Fast 0
-      Test::Exception 0
-      Test::More 0
   Data-Page-NoTotalEntries-0.02
     pathname: T/TO/TOKUHIROM/Data-Page-NoTotalEntries-0.02.tar.gz
     provides:
@@ -686,6 +645,37 @@ DISTRIBUTIONS
       Data::Section::Simple 0.07
     requirements:
       ExtUtils::MakeMaker 6.30
+  Data-Validate-Domain-0.14
+    pathname: D/DR/DROLSKY/Data-Validate-Domain-0.14.tar.gz
+    provides:
+      Data::Validate::Domain 0.14
+    requirements:
+      Exporter 0
+      ExtUtils::MakeMaker 0
+      Net::Domain::TLD 1.74
+      strict 0
+      warnings 0
+  Data-Validate-IP-0.26
+    pathname: D/DR/DROLSKY/Data-Validate-IP-0.26.tar.gz
+    provides:
+      Data::Validate::IP 0.26
+    requirements:
+      Exporter 0
+      ExtUtils::MakeMaker 0
+      NetAddr::IP 4
+      Scalar::Util 0
+      base 0
+      perl 5.008
+      strict 0
+      warnings 0
+  Data-Validate-URI-0.07
+    pathname: S/SO/SONNEN/Data-Validate-URI-0.07.tar.gz
+    provides:
+      Data::Validate::URI 0.07
+    requirements:
+      Data::Validate::Domain 0
+      Data::Validate::IP 0
+      ExtUtils::MakeMaker 0
   DateTime-1.39
     pathname: D/DR/DROLSKY/DateTime-1.39.tar.gz
     provides:
@@ -1210,6 +1200,24 @@ DISTRIBUTIONS
       base 0
       strict 0
       warnings 0
+  Email-Valid-1.202
+    pathname: R/RJ/RJBS/Email-Valid-1.202.tar.gz
+    provides:
+      Email::Valid 1.202
+    requirements:
+      ExtUtils::MakeMaker 0
+      Mail::Address 0
+      Scalar::Util 0
+      Test::More 0
+      perl 5.006
+  Email-Valid-Loose-0.05
+    pathname: M/MI/MIYAGAWA/Email-Valid-Loose-0.05.tar.gz
+    provides:
+      Email::Valid::Loose 0.05
+    requirements:
+      Email::Valid 0.17
+      ExtUtils::MakeMaker 0
+      Test::More 0.32
   Encode-Locale-1.05
     pathname: G/GA/GAAS/Encode-Locale-1.05.tar.gz
     provides:
@@ -1366,6 +1374,57 @@ DISTRIBUTIONS
       Filesys::Notify::Simple 0.12
     requirements:
       ExtUtils::MakeMaker 6.30
+  FormValidator-Lite-0.39
+    pathname: T/TO/TOKUHIROM/FormValidator-Lite-0.39.tar.gz
+    provides:
+      FormValidator::Lite 0.39
+      FormValidator::Lite::Constraint undef
+      FormValidator::Lite::Constraint::Date undef
+      FormValidator::Lite::Constraint::Default undef
+      FormValidator::Lite::Constraint::Email undef
+      FormValidator::Lite::Constraint::File undef
+      FormValidator::Lite::Constraint::Japanese undef
+      FormValidator::Lite::Constraint::Number undef
+      FormValidator::Lite::Constraint::Time undef
+      FormValidator::Lite::Constraint::URL undef
+      FormValidator::Lite::Hash undef
+      FormValidator::Lite::Messages::en undef
+      FormValidator::Lite::Messages::ja undef
+      FormValidator::Lite::Upload undef
+      FormValidator::Lite::Upload::CGI undef
+      FormValidator::Lite::Upload::HTTPEngine undef
+      FormValidator::Lite::Upload::PlackRequest undef
+    requirements:
+      CGI >= 3.31, != 4.05, != 4.06, != 4.07, != 4.08
+      Class::Accessor::Lite 0.05
+      Class::Load 0.11
+      Email::Valid 0
+      Email::Valid::Loose 0
+      Filter::Util::Call 0
+      Module::Build::Tiny 0.035
+      Scalar::Util 1.19
+      perl 5.008001
+  Furl-3.09
+    pathname: S/SY/SYOHEX/Furl-3.09.tar.gz
+    provides:
+      Furl 3.09
+      Furl::ConnectionCache undef
+      Furl::HTTP 3.09
+      Furl::Headers undef
+      Furl::Request undef
+      Furl::Response undef
+      Furl::ZlibStream undef
+    requirements:
+      Class::Accessor::Lite 0
+      Encode 0
+      HTTP::Parser::XS 0.11
+      MIME::Base64 0
+      Module::Build::Tiny 0.035
+      Mozilla::CA 0
+      Scalar::Util 0
+      Socket 0
+      Time::HiRes 0
+      perl 5.008001
   Git-Repository-1.320
     pathname: B/BO/BOOK/Git-Repository-1.320.tar.gz
     provides:
@@ -1588,6 +1647,14 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       HTTP::Headers 6
       perl 5.008001
+  HTTP-Parser-XS-0.17
+    pathname: K/KA/KAZUHO/HTTP-Parser-XS-0.17.tar.gz
+    provides:
+      HTTP::Parser::XS 0.17
+      HTTP::Parser::XS::PP undef
+    requirements:
+      ExtUtils::MakeMaker 6.36
+      Test::More 0.96
   HTTP-Server-Simple-0.51
     pathname: B/BP/BPS/HTTP-Server-Simple-0.51.tar.gz
     provides:
@@ -1782,6 +1849,39 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 6.59
       Test::More 0.47
       perl 5.006
+  MailTools-2.18
+    pathname: M/MA/MARKOV/MailTools-2.18.tar.gz
+    provides:
+      Mail undef
+      Mail::Address 2.18
+      Mail::Cap 2.18
+      Mail::Field 2.18
+      Mail::Field::AddrList 2.18
+      Mail::Field::Date 2.18
+      Mail::Field::Generic 2.18
+      Mail::Filter 2.18
+      Mail::Header 2.18
+      Mail::Internet 2.18
+      Mail::Mailer 2.18
+      Mail::Mailer::qmail 2.18
+      Mail::Mailer::rfc822 2.18
+      Mail::Mailer::sendmail 2.18
+      Mail::Mailer::smtp 2.18
+      Mail::Mailer::smtp::pipe 2.18
+      Mail::Mailer::smtps 2.18
+      Mail::Mailer::smtps::pipe 2.18
+      Mail::Mailer::testfile 2.18
+      Mail::Mailer::testfile::pipe 2.18
+      Mail::Send 2.18
+      Mail::Util 2.18
+    requirements:
+      Date::Format 0
+      Date::Parse 0
+      ExtUtils::MakeMaker 0
+      IO::Handle 0
+      Net::Domain 1.05
+      Net::SMTP 1.03
+      Test::More 0
   Module-Build-0.4220
     pathname: L/LE/LEONT/Module-Build-0.4220.tar.gz
     provides:
@@ -1997,6 +2097,14 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       Test 0
       perl 5.006
+  Net-Domain-TLD-1.75
+    pathname: A/AL/ALEXP/Net-Domain-TLD-1.75.tar.gz
+    provides:
+      Net::Domain::TLD 1.75
+    requirements:
+      Carp 0
+      ExtUtils::MakeMaker 0
+      Storable 0
   Net-HTTP-6.09
     pathname: E/ET/ETHER/Net-HTTP-6.09.tar.gz
     provides:
@@ -2048,6 +2156,19 @@ DISTRIBUTIONS
       perl 5.005
       strict 0
       warnings 0
+  NetAddr-IP-4.079
+    pathname: M/MI/MIKER/NetAddr-IP-4.079.tar.gz
+    provides:
+      NetAddr::IP 4.079
+      NetAddr::IP::InetBase 0.08
+      NetAddr::IP::Lite 1.57
+      NetAddr::IP::Util 1.53
+      NetAddr::IP::UtilPP 1.09
+      NetAddr::IP::UtilPolluted 1.53
+      NetAddr::IP::Util_IS 1
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::More 0
   POSIX-strftime-Compiler-0.42
     pathname: K/KA/KAZEBURO/POSIX-strftime-Compiler-0.42.tar.gz
     provides:
@@ -2693,39 +2814,6 @@ DISTRIBUTIONS
       perl 5.006
       strict 0
       warnings 0
-  Teng-0.28
-    pathname: S/SA/SATOH/Teng-0.28.tar.gz
-    provides:
-      Teng 0.28
-      Teng::Iterator undef
-      Teng::Plugin::BulkInsert undef
-      Teng::Plugin::Count undef
-      Teng::Plugin::FindOrCreate undef
-      Teng::Plugin::Lookup undef
-      Teng::Plugin::Pager undef
-      Teng::Plugin::Pager::MySQLFoundRows undef
-      Teng::Plugin::Replace undef
-      Teng::Plugin::SQLPager undef
-      Teng::Plugin::SingleBySQL undef
-      Teng::QueryBuilder undef
-      Teng::Row undef
-      Teng::Schema undef
-      Teng::Schema::Declare undef
-      Teng::Schema::Dumper undef
-      Teng::Schema::Loader undef
-      Teng::Schema::Table undef
-    requirements:
-      Class::Accessor::Lite 0.05
-      Class::Load 0.06
-      DBI 1.33
-      DBIx::Inspector 0.06
-      DBIx::TransactionManager 1.06
-      Data::Page 0
-      Data::Page::NoTotalEntries 0.02
-      Module::Build 0.38
-      SQL::Maker 0.14
-      parent 0
-      perl 5.008_001
   Test-Deep-1.123
     pathname: R/RJ/RJBS/Test-Deep-1.123.tar.gz
     provides:
@@ -2987,6 +3075,49 @@ DISTRIBUTIONS
       Time::HiRes 0
       XSLoader 0.02
       perl 5.008001
+  TimeDate-2.30
+    pathname: G/GB/GBARR/TimeDate-2.30.tar.gz
+    provides:
+      Date::Format 2.24
+      Date::Format::Generic 2.24
+      Date::Language 1.10
+      Date::Language::Afar 0.99
+      Date::Language::Amharic 1.00
+      Date::Language::Austrian 1.01
+      Date::Language::Brazilian 1.01
+      Date::Language::Bulgarian 1.01
+      Date::Language::Chinese 1.00
+      Date::Language::Chinese_GB 1.01
+      Date::Language::Czech 1.01
+      Date::Language::Danish 1.01
+      Date::Language::Dutch 1.02
+      Date::Language::English 1.01
+      Date::Language::Finnish 1.01
+      Date::Language::French 1.04
+      Date::Language::Gedeo 0.99
+      Date::Language::German 1.02
+      Date::Language::Greek 1.00
+      Date::Language::Hungarian 1.01
+      Date::Language::Icelandic 1.01
+      Date::Language::Italian 1.01
+      Date::Language::Norwegian 1.01
+      Date::Language::Oromo 0.99
+      Date::Language::Romanian 1.01
+      Date::Language::Russian 1.01
+      Date::Language::Russian_cp1251 1.01
+      Date::Language::Russian_koi8r 1.01
+      Date::Language::Sidama 0.99
+      Date::Language::Somali 0.99
+      Date::Language::Spanish 1.00
+      Date::Language::Swedish 1.01
+      Date::Language::Tigrinya 1.00
+      Date::Language::TigrinyaEritrean 1.00
+      Date::Language::TigrinyaEthiopian 1.00
+      Date::Language::Turkish 1.0
+      Date::Parse 2.30
+      Time::Zone 2.24
+    requirements:
+      ExtUtils::MakeMaker 0
   Try-Tiny-0.27
     pathname: E/ET/ETHER/Try-Tiny-0.27.tar.gz
     provides:

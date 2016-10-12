@@ -6,7 +6,7 @@ extends qw/Aniki/;
 __PACKAGE__->setup(
     schema => 'nishi_service::DB::Schema',
     filter => 'nishi_service::DB::Filter',
-    row    => 'nishi_service::DB::Row',
+    row    => 'nishi_service::DB::Darkness',
 );
 
 sub connect {
