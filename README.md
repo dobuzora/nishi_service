@@ -20,3 +20,10 @@ Oauth認証でログインできる、Webアプリケーションを作成する
 スキーマの更新があるたびに次のスクリプトを実行.  
 
     ./migrate
+
+`tools/Checker/`, `tools/Notifier` へ移動し `go build` を実行する.  
+完了後, 次を実行.
+
+    ./run
+
+`tools/Checker/Checker` は基本 Cron で定期的に実行することを予想.
