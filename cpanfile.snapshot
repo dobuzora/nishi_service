@@ -106,6 +106,16 @@ DISTRIBUTIONS
       URI::WithBase 0
       parent 0
       perl 5.008001
+  Amon2-Plugin-Web-CSRFDefender-7.03
+    pathname: T/TO/TOKUHIROM/Amon2-Plugin-Web-CSRFDefender-7.03.tar.gz
+    provides:
+      Amon2::Plugin::Web::CSRFDefender 7.03
+      Amon2::Plugin::Web::CSRFDefender::Random undef
+    requirements:
+      Amon2::Util 0
+      Digest::SHA 0
+      Module::Build::Tiny 0.035
+      perl 5.008001
   Anego-0.01_01
     pathname: P/PA/PAPIX/Anego-0.01_01.tar.gz
     provides:
@@ -666,6 +676,23 @@ DISTRIBUTIONS
       Data::Validate::Domain 0
       Data::Validate::IP 0
       ExtUtils::MakeMaker 0
+  Data-Validator-1.07
+    pathname: G/GF/GFUJI/Data-Validator-1.07.tar.gz
+    provides:
+      Data::Validator 1.07
+      Data::Validator::Role::AllowExtra undef
+      Data::Validator::Role::Croak undef
+      Data::Validator::Role::Method undef
+      Data::Validator::Role::NoRestricted undef
+      Data::Validator::Role::NoThrow undef
+      Data::Validator::Role::Sequenced undef
+      Data::Validator::Role::SmartSequenced undef
+      Data::Validator::Role::StrictSequenced undef
+    requirements:
+      ExtUtils::MakeMaker 6.59
+      Module::Build 0.38
+      Mouse 0.93
+      perl 5.008001
   DateTime-1.39
     pathname: D/DR/DROLSKY/DateTime-1.39.tar.gz
     provides:
@@ -1358,6 +1385,13 @@ DISTRIBUTIONS
       perl 5.008
       strict 0
       warnings 0
+  File-Which-1.21
+    pathname: P/PL/PLICEASE/File-Which-1.21.tar.gz
+    provides:
+      File::Which 1.21
+    requirements:
+      ExtUtils::MakeMaker 0
+      perl 5.006
   Filesys-Notify-Simple-0.12
     pathname: M/MI/MIYAGAWA/Filesys-Notify-Simple-0.12.tar.gz
     provides:
@@ -1414,6 +1448,22 @@ DISTRIBUTIONS
       Scalar::Util 0
       Socket 0
       Time::HiRes 0
+      perl 5.008001
+  Getopt-Compact-WithCmd-0.22
+    pathname: X/XA/XAICRON/Getopt-Compact-WithCmd-0.22.tar.gz
+    provides:
+      Getopt::Compact::WithCmd 0.22
+    requirements:
+      CPAN::Meta 0
+      CPAN::Meta::Prereqs 0
+      ExtUtils::CBuilder 0
+      ExtUtils::MakeMaker 6.59
+      Getopt::Long 2.38
+      Module::Build 0.38
+      Test::More 0.96
+      Test::Output 0
+      Test::Requires 0
+      Text::Table 0
       perl 5.008001
   Git-Repository-1.320
     pathname: B/BO/BOOK/Git-Repository-1.320.tar.gz
@@ -1831,6 +1881,18 @@ DISTRIBUTIONS
     requirements:
       Exporter 5.57
       Module::Build 0.4004
+  Log-Minimal-0.19
+    pathname: K/KA/KAZEBURO/Log-Minimal-0.19.tar.gz
+    provides:
+      Log::Minimal 0.19
+    requirements:
+      CPAN::Meta 0
+      CPAN::Meta::Prereqs 0
+      Data::Dumper 0
+      ExtUtils::CBuilder 0
+      Module::Build 0.38
+      Scalar::Util 0
+      Term::ANSIColor 0
   MRO-Compat-0.12
     pathname: B/BO/BOBTFISH/MRO-Compat-0.12.tar.gz
     provides:
@@ -2438,6 +2500,28 @@ DISTRIBUTIONS
       Proc::Wait3 0.05
     requirements:
       ExtUtils::MakeMaker 0
+  Proclet-0.35
+    pathname: K/KA/KAZEBURO/Proclet-0.35.tar.gz
+    provides:
+      Proclet 0.35
+      Proclet::Declare undef
+    requirements:
+      CPAN::Meta 0
+      CPAN::Meta::Prereqs 0
+      Data::Validator 0
+      ExtUtils::CBuilder 0
+      File::Which 1.09
+      Getopt::Compact::WithCmd 0.20
+      Log::Minimal 0.14
+      Module::Build 0.38
+      Mouse 0
+      Parallel::Prefork 0.13
+      String::ShellQuote 0
+      Term::ANSIColor 0
+      Time::Crontab 0.01
+      YAML::XS 0.38
+      parent 0
+      perl 5.008001
   Role-Tiny-2.000003
     pathname: H/HA/HAARG/Role-Tiny-2.000003.tar.gz
     provides:
@@ -2633,6 +2717,12 @@ DISTRIBUTIONS
     requirements:
       Module::Build 0.38
       perl 5.008
+  Set-Crontab-1.03
+    pathname: A/AM/AMS/Set-Crontab-1.03.tar.gz
+    provides:
+      Set::Crontab 1.03
+    requirements:
+      ExtUtils::MakeMaker 0
   Signal-Mask-0.008
     pathname: L/LE/LEONT/Signal-Mask-0.008.tar.gz
     provides:
@@ -2736,6 +2826,25 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 0
       Test::More 0
+  String-ShellQuote-1.04
+    pathname: R/RO/ROSCH/String-ShellQuote-1.04.tar.gz
+    provides:
+      String::ShellQuote 1.04
+    requirements:
+      ExtUtils::MakeMaker 0
+  Sub-Exporter-0.987
+    pathname: R/RJ/RJBS/Sub-Exporter-0.987.tar.gz
+    provides:
+      Sub::Exporter 0.987
+      Sub::Exporter::Util 0.987
+    requirements:
+      Carp 0
+      Data::OptList 0.100
+      ExtUtils::MakeMaker 6.30
+      Params::Util 0.14
+      Sub::Install 0.92
+      strict 0
+      warnings 0
   Sub-Exporter-Progressive-0.001012
     pathname: F/FR/FREW/Sub-Exporter-Progressive-0.001012.tar.gz
     provides:
@@ -2921,6 +3030,18 @@ DISTRIBUTIONS
       strict 0
       vars 0
       warnings 0
+  Test-Output-1.03
+    pathname: B/BD/BDFOY/Test-Output-1.03.tar.gz
+    provides:
+      Test::Output 1.03
+    requirements:
+      Capture::Tiny 0.17
+      ExtUtils::MakeMaker 0
+      File::Temp 0.17
+      Sub::Exporter 0
+      Test::More 0
+      Test::Tester 0.107
+      perl 5.006
   Test-Requires-0.10
     pathname: T/TO/TOKUHIROM/Test-Requires-0.10.tar.gz
     provides:
@@ -2991,6 +3112,21 @@ DISTRIBUTIONS
       base 0
       strict 0
       warnings 0
+  Text-Aligner-0.13
+    pathname: S/SH/SHLOMIF/Text-Aligner-0.13.tar.gz
+    provides:
+      Text::Aligner 0.13
+      Text::Aligner::Auto 0.13
+      Text::Aligner::MaxKeeper 0.13
+    requirements:
+      Exporter 0
+      ExtUtils::MakeMaker 0
+      Module::Build 0.28
+      Term::ANSIColor 2.02
+      perl 5.008
+      strict 0
+      vars 0
+      warnings 0
   Text-Diff-1.44
     pathname: N/NE/NEILB/Text-Diff-1.44.tar.gz
     provides:
@@ -3003,6 +3139,18 @@ DISTRIBUTIONS
       Exporter 0
       ExtUtils::MakeMaker 0
       perl 5.006
+  Text-Table-1.131
+    pathname: S/SH/SHLOMIF/Text-Table-1.131.tar.gz
+    provides:
+      Text::Table 1.131
+    requirements:
+      List::Util 0
+      Module::Build 0.36
+      Test::More 0
+      Text::Aligner 0.05
+      perl 5.008
+      strict 0
+      warnings 0
   Text-Xslate-3.3.9
     pathname: S/SY/SYOHEX/Text-Xslate-3.3.9.tar.gz
     provides:
@@ -3049,6 +3197,15 @@ DISTRIBUTIONS
     requirements:
       Test::More 0
       perl 5.005
+  Time-Crontab-0.04
+    pathname: K/KA/KAZEBURO/Time-Crontab-0.04.tar.gz
+    provides:
+      Time::Crontab 0.04
+    requirements:
+      List::MoreUtils 0
+      Module::Build 0.38
+      Set::Crontab 1.03
+      perl 5.008005
   Time-Moment-0.38
     pathname: C/CH/CHANSEN/Time-Moment-0.38.tar.gz
     provides:
@@ -3299,6 +3456,15 @@ DISTRIBUTIONS
       yaml_mapping undef
       yaml_scalar undef
       yaml_sequence undef
+    requirements:
+      ExtUtils::MakeMaker 0
+      perl 5.008001
+  YAML-LibYAML-0.63
+    pathname: T/TI/TINITA/YAML-LibYAML-0.63.tar.gz
+    provides:
+      YAML::LibYAML 0.63
+      YAML::XS 0.63
+      YAML::XS::LibYAML undef
     requirements:
       ExtUtils::MakeMaker 0
       perl 5.008001

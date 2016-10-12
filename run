@@ -1,0 +1,15 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use Proclet::Declare;
+
+color;
+env(
+    PLACK_ENV => 'development',
+    LM_COLOR  => 1,
+);
+
+service('core', 'perl script/nishi_service-server');
+service('notifier', 'cd tools/Notifier && ./Notifier');
+
+run;

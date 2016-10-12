@@ -25,6 +25,7 @@ requires 'Furl';
 requires 'FormValidator::Lite';
 requires 'Data::Validate::URI';
 requires 'Try::Tiny';
+requires 'Proclet::Declare';
 
 on configure => sub {
     requires 'Module::Build', '0.38';

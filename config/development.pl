@@ -1,7 +1,7 @@
 +{
     DBI => {
         connect_info => [
-            "dbi:Pg:dbname=nishi_service;host=localhost;port=5432;",$ENV{PGUSER}, $ENV{PGPASS}, {
+            "dbi:Pg:dbname=nishi_service;host=localhost;port=5432;",'', '', {
             }
         ]
     },
