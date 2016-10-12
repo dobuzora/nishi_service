@@ -106,16 +106,6 @@ DISTRIBUTIONS
       URI::WithBase 0
       parent 0
       perl 5.008001
-  Amon2-Plugin-Web-CSRFDefender-7.03
-    pathname: T/TO/TOKUHIROM/Amon2-Plugin-Web-CSRFDefender-7.03.tar.gz
-    provides:
-      Amon2::Plugin::Web::CSRFDefender 7.03
-      Amon2::Plugin::Web::CSRFDefender::Random undef
-    requirements:
-      Amon2::Util 0
-      Digest::SHA 0
-      Module::Build::Tiny 0.035
-      perl 5.008001
   Anego-0.01_01
     pathname: P/PA/PAPIX/Anego-0.01_01.tar.gz
     provides:
