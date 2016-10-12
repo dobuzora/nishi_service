@@ -7,9 +7,9 @@
     },
     
     Auth => +{
-	Line_Notify => +{
-	    client_id       => '',
-	    client_secret   => '',
-	}
+    	LINENotify => +{
+    	    client_id       => $ENV{LINE_CLIENT_ID},
+    	    client_secret   => $ENV{LINE_CLIENT_SECRET}
+    	}
     }
 };
