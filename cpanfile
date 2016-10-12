@@ -22,6 +22,9 @@ requires 'Time::Moment';
 requires 'Amon2::Auth';
 requires 'JSON::XS';
 requires 'Furl';
+requires 'FormValidator::Lite';
+requires 'Data::Validate::URI';
+requires 'Try::Tiny';
 
 on configure => sub {
     requires 'Module::Build', '0.38';

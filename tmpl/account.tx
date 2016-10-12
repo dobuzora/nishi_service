@@ -1,0 +1,20 @@
+: cascade "include/layout.tx"
+
+: override content -> {
+
+<h1 style="padding: 70px; text-align: center; font-size: 80px; line-height: 1; letter-spacing: -2px;"> Register!! </h1>
+
+<form class="form-inline" method="POST" action="<: uri_for('/auth') :>">
+    <div class="form-group">
+        <label>username</label>
+        <input type="text" class="form-control" name="username" placeholder="">
+    </div>
+    <div class="form-group">
+        <label>password</label>
+        <input type="password" class="form-control" name="password" placeholder="">
+    </div>
+    <button type="submit" class="btn btn-default">register</button>
+</form>
+
+
+: }

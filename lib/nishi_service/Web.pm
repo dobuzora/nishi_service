@@ -4,7 +4,7 @@ use warnings;
 use utf8;
 use parent qw/nishi_service Amon2::Web/;
 use File::Spec;
-
+use nishi_service::DB;
 
 # dispatcher
 use nishi_service::Web::Dispatcher;
@@ -18,6 +18,9 @@ __PACKAGE__->load_plugins(
     'Web::JSON',
     '+nishi_service::Web::Plugin::Session',
 );
+
+use nishi_service::Web::Request;
+sub create_request { nishi_service::Web::Request->new($_[1], $_[0]) }
 
 # setup view
 use nishi_service::Web::View;
@@ -50,8 +53,8 @@ __PACKAGE__->load_plugin('Web::Auth',{
     module => 'LINENotify',
     on_finished => sub {
     	my ($c, $access_token) = @_;
-        warn $access_token;
-    	return $c->redirect('/');
+        $c->session->set('token' => $access_token);
+    	return $c->redirect('/account/register');
     }
 });
 

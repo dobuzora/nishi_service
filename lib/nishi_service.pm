@@ -6,8 +6,9 @@ our $VERSION='0.01';
 use 5.008001;
 use nishi_service::DB::Schema;
 use nishi_service::DB;
-
+use FormValidator::Lite;
 use parent qw/Amon2/;
+
 # Enable project local mode.
 __PACKAGE__->make_local_context();
 
@@ -24,6 +25,18 @@ sub db {
         );
     }
     $c->{db};
+}
+
+
+sub validator {
+    my $c = shift;
+    my $q =  $c->{args}
+        ? +{ %{$c->{args}}, $c->req->parameters->flatten}
+        : $c->req;
+
+    my $validator = FormValidator::Lite->new($q);
+
+    return $validator;
 }
 
 1;

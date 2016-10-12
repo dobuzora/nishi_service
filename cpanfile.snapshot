@@ -363,6 +363,25 @@ DISTRIBUTIONS
       File::Spec 0.80
       Test::More 0.47
       perl 5.006
+  Class-Load-0.23
+    pathname: E/ET/ETHER/Class-Load-0.23.tar.gz
+    provides:
+      Class::Load 0.23
+      Class::Load::PP 0.23
+    requirements:
+      Carp 0
+      Data::OptList 0
+      Exporter 0
+      ExtUtils::MakeMaker 0
+      Module::Implementation 0.04
+      Module::Runtime 0.012
+      Package::Stash 0.14
+      Scalar::Util 0
+      Try::Tiny 0
+      base 0
+      perl 5.006
+      strict 0
+      warnings 0
   Class-Method-Modifiers-2.12
     pathname: E/ET/ETHER/Class-Method-Modifiers-2.12.tar.gz
     provides:
@@ -600,6 +619,17 @@ DISTRIBUTIONS
       Test::Requires 0
       XSLoader 0.02
       perl 5.008001
+  Data-OptList-0.110
+    pathname: R/RJ/RJBS/Data-OptList-0.110.tar.gz
+    provides:
+      Data::OptList 0.110
+    requirements:
+      ExtUtils::MakeMaker 0
+      List::Util 0
+      Params::Util 0
+      Sub::Install 0.921
+      strict 0
+      warnings 0
   Data-Page-NoTotalEntries-0.02
     pathname: T/TO/TOKUHIROM/Data-Page-NoTotalEntries-0.02.tar.gz
     provides:
@@ -615,6 +645,37 @@ DISTRIBUTIONS
       Data::Section::Simple 0.07
     requirements:
       ExtUtils::MakeMaker 6.30
+  Data-Validate-Domain-0.14
+    pathname: D/DR/DROLSKY/Data-Validate-Domain-0.14.tar.gz
+    provides:
+      Data::Validate::Domain 0.14
+    requirements:
+      Exporter 0
+      ExtUtils::MakeMaker 0
+      Net::Domain::TLD 1.74
+      strict 0
+      warnings 0
+  Data-Validate-IP-0.26
+    pathname: D/DR/DROLSKY/Data-Validate-IP-0.26.tar.gz
+    provides:
+      Data::Validate::IP 0.26
+    requirements:
+      Exporter 0
+      ExtUtils::MakeMaker 0
+      NetAddr::IP 4
+      Scalar::Util 0
+      base 0
+      perl 5.008
+      strict 0
+      warnings 0
+  Data-Validate-URI-0.07
+    pathname: S/SO/SONNEN/Data-Validate-URI-0.07.tar.gz
+    provides:
+      Data::Validate::URI 0.07
+    requirements:
+      Data::Validate::Domain 0
+      Data::Validate::IP 0
+      ExtUtils::MakeMaker 0
   DateTime-1.39
     pathname: D/DR/DROLSKY/DateTime-1.39.tar.gz
     provides:
@@ -1139,6 +1200,24 @@ DISTRIBUTIONS
       base 0
       strict 0
       warnings 0
+  Email-Valid-1.202
+    pathname: R/RJ/RJBS/Email-Valid-1.202.tar.gz
+    provides:
+      Email::Valid 1.202
+    requirements:
+      ExtUtils::MakeMaker 0
+      Mail::Address 0
+      Scalar::Util 0
+      Test::More 0
+      perl 5.006
+  Email-Valid-Loose-0.05
+    pathname: M/MI/MIYAGAWA/Email-Valid-Loose-0.05.tar.gz
+    provides:
+      Email::Valid::Loose 0.05
+    requirements:
+      Email::Valid 0.17
+      ExtUtils::MakeMaker 0
+      Test::More 0.32
   Encode-Locale-1.05
     pathname: G/GA/GAAS/Encode-Locale-1.05.tar.gz
     provides:
@@ -1295,6 +1374,36 @@ DISTRIBUTIONS
       Filesys::Notify::Simple 0.12
     requirements:
       ExtUtils::MakeMaker 6.30
+  FormValidator-Lite-0.39
+    pathname: T/TO/TOKUHIROM/FormValidator-Lite-0.39.tar.gz
+    provides:
+      FormValidator::Lite 0.39
+      FormValidator::Lite::Constraint undef
+      FormValidator::Lite::Constraint::Date undef
+      FormValidator::Lite::Constraint::Default undef
+      FormValidator::Lite::Constraint::Email undef
+      FormValidator::Lite::Constraint::File undef
+      FormValidator::Lite::Constraint::Japanese undef
+      FormValidator::Lite::Constraint::Number undef
+      FormValidator::Lite::Constraint::Time undef
+      FormValidator::Lite::Constraint::URL undef
+      FormValidator::Lite::Hash undef
+      FormValidator::Lite::Messages::en undef
+      FormValidator::Lite::Messages::ja undef
+      FormValidator::Lite::Upload undef
+      FormValidator::Lite::Upload::CGI undef
+      FormValidator::Lite::Upload::HTTPEngine undef
+      FormValidator::Lite::Upload::PlackRequest undef
+    requirements:
+      CGI >= 3.31, != 4.05, != 4.06, != 4.07, != 4.08
+      Class::Accessor::Lite 0.05
+      Class::Load 0.11
+      Email::Valid 0
+      Email::Valid::Loose 0
+      Filter::Util::Call 0
+      Module::Build::Tiny 0.035
+      Scalar::Util 1.19
+      perl 5.008001
   Furl-3.09
     pathname: S/SY/SYOHEX/Furl-3.09.tar.gz
     provides:
@@ -1740,6 +1849,39 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 6.59
       Test::More 0.47
       perl 5.006
+  MailTools-2.18
+    pathname: M/MA/MARKOV/MailTools-2.18.tar.gz
+    provides:
+      Mail undef
+      Mail::Address 2.18
+      Mail::Cap 2.18
+      Mail::Field 2.18
+      Mail::Field::AddrList 2.18
+      Mail::Field::Date 2.18
+      Mail::Field::Generic 2.18
+      Mail::Filter 2.18
+      Mail::Header 2.18
+      Mail::Internet 2.18
+      Mail::Mailer 2.18
+      Mail::Mailer::qmail 2.18
+      Mail::Mailer::rfc822 2.18
+      Mail::Mailer::sendmail 2.18
+      Mail::Mailer::smtp 2.18
+      Mail::Mailer::smtp::pipe 2.18
+      Mail::Mailer::smtps 2.18
+      Mail::Mailer::smtps::pipe 2.18
+      Mail::Mailer::testfile 2.18
+      Mail::Mailer::testfile::pipe 2.18
+      Mail::Send 2.18
+      Mail::Util 2.18
+    requirements:
+      Date::Format 0
+      Date::Parse 0
+      ExtUtils::MakeMaker 0
+      IO::Handle 0
+      Net::Domain 1.05
+      Net::SMTP 1.03
+      Test::More 0
   Module-Build-0.4220
     pathname: L/LE/LEONT/Module-Build-0.4220.tar.gz
     provides:
@@ -1955,6 +2097,14 @@ DISTRIBUTIONS
       ExtUtils::MakeMaker 0
       Test 0
       perl 5.006
+  Net-Domain-TLD-1.75
+    pathname: A/AL/ALEXP/Net-Domain-TLD-1.75.tar.gz
+    provides:
+      Net::Domain::TLD 1.75
+    requirements:
+      Carp 0
+      ExtUtils::MakeMaker 0
+      Storable 0
   Net-HTTP-6.09
     pathname: E/ET/ETHER/Net-HTTP-6.09.tar.gz
     provides:
@@ -2006,6 +2156,19 @@ DISTRIBUTIONS
       perl 5.005
       strict 0
       warnings 0
+  NetAddr-IP-4.079
+    pathname: M/MI/MIKER/NetAddr-IP-4.079.tar.gz
+    provides:
+      NetAddr::IP 4.079
+      NetAddr::IP::InetBase 0.08
+      NetAddr::IP::Lite 1.57
+      NetAddr::IP::Util 1.53
+      NetAddr::IP::UtilPP 1.09
+      NetAddr::IP::UtilPolluted 1.53
+      NetAddr::IP::Util_IS 1
+    requirements:
+      ExtUtils::MakeMaker 0
+      Test::More 0
   POSIX-strftime-Compiler-0.42
     pathname: K/KA/KAZEBURO/POSIX-strftime-Compiler-0.42.tar.gz
     provides:
@@ -2073,6 +2236,17 @@ DISTRIBUTIONS
       Test::Requires 0
       Test::SharedFork 0
       perl 5.008001
+  Params-Util-1.07
+    pathname: A/AD/ADAMK/Params-Util-1.07.tar.gz
+    provides:
+      Params::Util 1.07
+    requirements:
+      ExtUtils::CBuilder 0.27
+      ExtUtils::MakeMaker 6.52
+      File::Spec 0.80
+      Scalar::Util 1.18
+      Test::More 0.42
+      perl 5.00503
   Params-ValidationCompiler-0.13
     pathname: D/DR/DROLSKY/Params-ValidationCompiler-0.13.tar.gz
     provides:
@@ -2585,6 +2759,17 @@ DISTRIBUTIONS
     requirements:
       ExtUtils::MakeMaker 0
       Test::More 0
+  Sub-Install-0.928
+    pathname: R/RJ/RJBS/Sub-Install-0.928.tar.gz
+    provides:
+      Sub::Install 0.928
+    requirements:
+      B 0
+      Carp 0
+      ExtUtils::MakeMaker 6.30
+      Scalar::Util 0
+      strict 0
+      warnings 0
   Sub-Name-0.21
     pathname: E/ET/ETHER/Sub-Name-0.21.tar.gz
     provides:
@@ -2890,6 +3075,49 @@ DISTRIBUTIONS
       Time::HiRes 0
       XSLoader 0.02
       perl 5.008001
+  TimeDate-2.30
+    pathname: G/GB/GBARR/TimeDate-2.30.tar.gz
+    provides:
+      Date::Format 2.24
+      Date::Format::Generic 2.24
+      Date::Language 1.10
+      Date::Language::Afar 0.99
+      Date::Language::Amharic 1.00
+      Date::Language::Austrian 1.01
+      Date::Language::Brazilian 1.01
+      Date::Language::Bulgarian 1.01
+      Date::Language::Chinese 1.00
+      Date::Language::Chinese_GB 1.01
+      Date::Language::Czech 1.01
+      Date::Language::Danish 1.01
+      Date::Language::Dutch 1.02
+      Date::Language::English 1.01
+      Date::Language::Finnish 1.01
+      Date::Language::French 1.04
+      Date::Language::Gedeo 0.99
+      Date::Language::German 1.02
+      Date::Language::Greek 1.00
+      Date::Language::Hungarian 1.01
+      Date::Language::Icelandic 1.01
+      Date::Language::Italian 1.01
+      Date::Language::Norwegian 1.01
+      Date::Language::Oromo 0.99
+      Date::Language::Romanian 1.01
+      Date::Language::Russian 1.01
+      Date::Language::Russian_cp1251 1.01
+      Date::Language::Russian_koi8r 1.01
+      Date::Language::Sidama 0.99
+      Date::Language::Somali 0.99
+      Date::Language::Spanish 1.00
+      Date::Language::Swedish 1.01
+      Date::Language::Tigrinya 1.00
+      Date::Language::TigrinyaEritrean 1.00
+      Date::Language::TigrinyaEthiopian 1.00
+      Date::Language::Turkish 1.0
+      Date::Parse 2.30
+      Time::Zone 2.24
+    requirements:
+      ExtUtils::MakeMaker 0
   Try-Tiny-0.27
     pathname: E/ET/ETHER/Try-Tiny-0.27.tar.gz
     provides:
